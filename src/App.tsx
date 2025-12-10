@@ -182,13 +182,13 @@ function App() {
           <span className="zoom-level">{Math.round(zoomLevel * 100)}%</span>
         </div>
       </div>
-      <div className="content-container" style={{ transform: `translate(${position.x}px, ${position.y}px)` }}>
+      <div className="content-container" style={{ transform: `translate(${position.x}px, ${position.y}px) scale(${zoomLevel})`, transformOrigin: 'top left' }}>
         {renderError && (
           <div className="render-error">
             {renderError}
           </div>
         )}
-        <div className="mermaid-container" ref={mermaidRef} style={{ transform: `scale(${zoomLevel})`, transformOrigin: 'center center' }}>
+        <div className="mermaid-container" ref={mermaidRef}>
           {!mermaidCode && <p>请选择一个Mermaid文件</p>}
         </div>
       </div>
