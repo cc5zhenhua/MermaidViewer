@@ -95,7 +95,7 @@ function App() {
   };
 
   const handleZoomIn = () => {
-    setZoomLevel(prev => Math.min(prev + 0.2, 3)); // 最大放大到3倍
+    setZoomLevel(prev => Math.min(prev + 0.2, 20)); // 最大放大到3倍
   };
 
   const handleZoomOut = () => {
